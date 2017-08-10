@@ -1,0 +1,137 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: flex-start
+}
+
+.container-item {
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  justify-content: space-around;
+  margin-bottom: 10rpx
+}
+.image-item{
+  width:190rpx;
+  height: 190rpx;
+}
+/**以上是横向滚动的**/
+/**
+标题
+**/
+
+
+#title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 15rpx;
+    width: 750rpx;
+    padding-left: 30rpx;
+}
+
+.mtitle2{
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+    color: #353535;
+}
+/**多行**/
+.mtitle3{
+  width: 420rpx;
+  font-size: 14px;
+  word-break:break-all;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+/**单行**/
+.mtitle4{
+  width: 420rpx;
+  color: #888888;
+  font-size: 13px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  -webkit-text-overflow:ellipsis;
+  -moz-text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+/**单行**/
+.btn1{
+  width: 81rpx;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  border:1px solid #ddd;
+ font-weight: bold;
+ text-align: center;
+  color: #fab741;
+  font-size: 13px;
+}
+
+
+.view4{
+  height: 40rpx;
+   display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.bg{
+  height:280rpx;
+  width:100%;
+  position: relative;
+}
+.avart{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width:180rpx; 
+  height:180rpx; 
+  border-radius:50%; 
+}
+.nickName{
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 85%;
+  bottom: 0;
+  color: #353535;
+  margin: auto;
+}
+
+
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bgimage{
+  position: relative;
+  height:280rpx; 
+  background-color: white;
+  width: 100%; 
+}
+.textContainer {
+  margin-top: 200px;
+}
+
+/*body内容*/
+#body-wrap {
+    margin-top: 20rpx;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.body-wrap{
+    display:flex;margin:auto
+}

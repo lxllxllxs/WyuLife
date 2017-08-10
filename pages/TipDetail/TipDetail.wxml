@@ -1,0 +1,29 @@
+<view class="page">
+
+   <view class="section__title"/>
+   <view class="section__title">
+      <input placeholder="姓名" name="realName" disabled="true" value="姓名：{{tipOff.realName}}"/>
+  </view>
+
+   <view class="section__title">
+      <input placeholder="手机号" name="phone" disabled="true" value="手机号：{{tipOff.phone}}" />
+  </view>
+   <view class="section__title">
+      <input placeholder="事件类型" name="type" disabled="true" value="事件类型：{{tipOff.type}}" />
+  </view>
+
+   <view class="section__title">
+     <textarea class="textArea" placeholder="内容描述" disabled="true" auto-height="true" name="content" value="内容描述：{{tipOff.content}}"/>
+  </view>
+
+    
+<view >
+    <image  wx:for="{{tipOff.imgList}}" wx:for-item="mItem" src="{{mItem}}" mode="widthFix" class="img"></image>
+</view>
+
+
+  <view wx:if="{{tipOff.videoUrl.length>0}}" class="video" >
+       <video src="{{tipOff.videoUrl}}" autoplay="true" controls ></video>
+  </view>
+</view>
+

@@ -1,0 +1,8 @@
+{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "BackgroundColor":"#ffffff",
+    "navigationBarTitleText": "爆料达人榜",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+}

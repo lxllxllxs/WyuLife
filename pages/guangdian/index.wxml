@@ -1,0 +1,45 @@
+<template name="msgItem">
+  <!--这里绑定自定义数据-->
+  <view class="view_hori"  data-tucao="{{item}}" bindtap="jumpToDetail">
+
+  <view wx:if="{{item.imgUrl.length>1}}"> 
+    <image style="width: 150rpx; height:150rpx; background-color: #eeeeee;" mode="widthFix" src="{{item.imgUrl}}">
+          </image>
+    </view>
+    <view wx:else> 
+      <image style="width: 150rpx; height:150rpx; background-color: #eeeeee;" mode="widthFix" src="http://www.wyulife.cn:8080/cs/0K8T9gee.jpg">
+      </image>
+  </view>
+
+    <view >
+     <view style="height:120rpx">
+        <text class="box box_100" >{{item.userNo}} </text>
+      </view>
+      <text class="box page-body-text-small" style="margin-left:400rpx">{{item.content}} </text>
+    </view>
+
+
+  </view>
+</template>
+
+ <scroll-view scroll-y="true" style="height: 100%;"  scroll-into-view="{{toView}}"  bindscrolltolower="lower" scroll-top="{{scrollTop}}">
+  <view wx:for="{{tuCaoList}}" wx:for-index="idx" wx:for-item="item">
+  <template is="msgItem" data="{{item}}"/>
+  </view>
+ 
+  <view wx:if="{{noMore}}" class="tc">到底了</view>
+  </scroll-view>
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+  </loading>
+
+
+<!--<view>{{message}}</view>-->
+<!--<view class="btn-area" id="buttonContainer">
+   <view class="button-wrapper"  bindtap="changeMessage">
+      <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+> primary
+        </button>
+    </view>
+  </view>-->
+  

@@ -1,0 +1,166 @@
+.scroll-view{
+  background:#FBF9FE;
+}
+
+.camera{
+  width:72px; 
+  height:72px; 
+  border-radius:50%; 
+}
+
+.imgBox{
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: center;
+}
+
+page {  
+  height: 100%;
+  background-color:#fff;  
+}  
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.bottom{
+  width:100%;
+  position:fixed; 
+  background: #FBF9FE;
+  bottom:0;
+}
+.bottomLine{
+  border-color: #ddd; 
+  border-style: solid; 
+  border-top-width: 0px;
+  border-right-width: 0px; 
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+}
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textContainer {
+  margin-top: 200px;
+}
+.textArea{
+    padding: 15px;
+    
+    background-color: white
+}
+
+.hide{
+    display:none
+}
+
+.bgc{
+  color: white;
+  background-color: #fbb842;
+}
+.bgr{
+  color: white;
+  background-color: #d81e06;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.type{
+  height: 55px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: white;
+  display:flex;
+  align-items: center;
+
+}
+
+.type1{
+  margin-left:15px;
+  display: flex;
+  align-items: center;
+  
+    
+}
+@import "template/template.wxss";
+/*模板内容*/
+#template-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*body内容*/
+#body-wrap {
+    height: 100%;
+    width: 100%;
+}
+.template-container{
+    width: 20%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.parent {
+  width: 750rpx;
+  display: flex;
+  flex-flow: row wrap;
+  padding-left:20rpx;
+}
+
+/**
+20+146*5 146-20
+**/
+.child {
+  position: relative;
+  text-align: center;
+  height:126rpx;
+  width: 126rpx;
+  padding-right:20rpx;
+}
+
+.child2 {
+  text-align: center;
+  height:126rpx;
+  width: 126rpx;
+  padding-right:20rpx;
+}
+
+.del{
+  margin-left: 80rpx;
+  position: absolute;
+  z-index: 3;
+  text-align: right;
+  height:48rpx;
+  width: 48rpx;
+}
+.videoParent{
+    position: relative;
+    width: 710rpx;
+  margin-top: 20rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+}
+.mov {
+    width: 100%;
+}
+
+.relati{
+  position: relative;
+  width: 750rpx;
+}
+.btn-area{
+    padding: 0 15px;
+}

@@ -1,0 +1,9 @@
+#mItem-wrap{
+    width: 95%;
+    height: 95%;
+    align-items: center;
+
+}
+.item-image{
+    width: 100%;
+}

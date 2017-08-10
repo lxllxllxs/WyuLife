@@ -1,0 +1,43 @@
+<view class="page">
+<view>
+   <view class="bgimage">
+         <image class="avart" src="{{avart}}"></image>
+          <text class="nickName">{{userInfo.nickName}}</text>
+   </view>
+
+   <view class="view_hori" >
+      <view class="lxl_text">总次数：<text class="theme_yellow">{{userInfo.tipCount}}次</text></view>
+       <view class="lxl_text">收益：<text class="theme_yellow">{{userInfo.reward}}元</text> </view>
+   </view>
+</view>
+
+<view id="body-wrap">
+ <view id="title" wx:if="{{userInfo.isAdmin ==1}}">
+    <textview class="mtitle2" style="width:100%" bindtap="jumpToAdmList">查看爆料>>></textview>
+</view>
+ <!-- <scroll-view scroll-x="true" class="content-items">
+    <view class="scroll-content">
+      <view class="drugitem" wx:for="{{tipOffsAdopt}}" wx:key="{{index}}" bindtap="jumpToDetail" data-tipOff="{{item}}">
+         <image wx:if="{{item.imgList[0].length>0}}" src="{{item.imgList[0]}}" mode="aspectFill"></image>
+        <image  wx:else src="../../image/default.png" mode="aspectFill"></image>
+        <text class="black">{{item.title}}</text>
+      </view>
+    </view>
+  </scroll-view>-->
+</view>
+<swiper duration="200" style="height:640rpx">
+  <block wx:for="{{tipOffs}}">
+    <swiper-item>
+    <view class="swiper-item box6" bindtap="jumpToDetail" data-tipOff="{{item}}">
+      <image class="slide-image" wx:if="{{item.imgList[0].length>0}}" src="{{item.imgList[0]}}" mode="aspectFill"></image>
+      <image class="slide-image"  wx:else src="../../image/default.png" mode="aspectFill"></image>
+      <image class="adopt" wx:if="{{item.isAdopt>0}}" src="../../image/adopt.png" mode="aspectFit"></image>
+      <text class="black">{{item.title}}({{item.type}})</text>
+      <text class="black">{{item.realName}}——{{item.createDate}}</text>
+    </view>
+
+    </swiper-item>
+  </block>
+</swiper>
+
+</view>

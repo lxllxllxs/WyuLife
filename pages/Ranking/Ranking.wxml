@@ -1,0 +1,27 @@
+
+<view  class="rcontainer">
+<view id="title" >
+    <textview class="mtitle" style="width:15%">排名</textview>
+    <textview class="mtitle"   style="width:55%">昵称</textview>
+    <textview class="mtitle"   style="width:20%">次数</textview>
+    <textview class="mtitle"   style="width:15%">奖励</textview>
+</view>
+<view wx:for="{{wxUserList}}" class="template-container">
+ <view id="mItem-wrap" bindtap="onListItemClick" data-name="{{mItem.name}}">
+ 
+        <image  wx:if="{{index==0}}" class="img1" src="/image/top1.png" mode="aspectFit"  style="width:15%;"></image>
+        <image  wx:elif="{{index==1}}" class="img1" src="/image/top2.png" mode="aspectFit"  style="width:15%;"></image>
+        <image  wx:elif="{{index==2}}" class="img1" src="/image/top3.png" mode="aspectFit"  style="width:15%;"></image>
+        <textview class="listitem"  wx:else style="width:15%;">{{index+1}}</textview>
+
+
+        <textview class="listitem2" style="width:5%;"></textview>
+        <image  src="{{item.avatarUrl}}"  class="avart" style="width:15%;margin-right:20rpx"></image>
+        <textview class="listitem2" style="width:40%;">{{item.nickName}}</textview>
+        
+        <textview class="listitem"  style="width:15%;">{{item.adoptCount}}</textview>
+        <textview class="listitem"  style="width:15%;">{{item.reward}}R</textview>
+    </view>
+</view>
+   
+</view>

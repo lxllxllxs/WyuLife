@@ -1,0 +1,5 @@
+  
+  <view style="text-align:center">
+    <video style="margin:0 auto" src="http://www.kpbtv.com/kpbtvs/wxpay/video/test.mp4" autoplay="true">
+    </video>
+  </view>

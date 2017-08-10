@@ -1,0 +1,9 @@
+<!--爆料的列表模板-->
+<template name="mListTem">
+    <view id="mItem-wrap" bindtap="jumpToDetail" data-tipOff="{{mItem}}">
+
+        <image wx:if="{{mItem.imgList[0].length>0}}" src="{{mItem.imgList[0]}}" mode="aspectFit" class="item-image"></image>
+        <image wx:else src="../../image/default.png" mode="aspectFill" class="item-image"></image>
+        <textview class="item-name">{{mItem.title}}<textview wx:if="{{mItem.isAdopt>0}}" class="theme_yellow">（采用）</textview></textview>
+    </view>
+</template>

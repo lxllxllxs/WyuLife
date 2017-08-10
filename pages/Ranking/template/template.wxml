@@ -1,0 +1,9 @@
+<!--首页的列表模板-->
+<template name="mListTem">
+    <view id="mItem-wrap" bindtap="onListItemClick" data-name="{{mItem.name}}">
+        <image src="{{mItem.img}}" mode="aspectFit"  style="width:15%"></image>
+        <textview class="item-name" style="width:60%">{{mItem.title}}</textview>
+        <textview class="item-name" style="width:10%">{{mItem.title}}</textview>
+        <textview class="item-name" style="width:15%">{{mItem.title}}</textview>
+    </view>
+</template>

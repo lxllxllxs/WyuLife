@@ -1,0 +1,4 @@
+.bgimage{
+    height: 150rpx;
+    background-image: url('/image/stop.png')
+}

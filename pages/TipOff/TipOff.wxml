@@ -1,0 +1,64 @@
+<view class="page">
+   <view class="section__title"/>
+<form bindsubmit="formSubmit" bindreset="formReset">
+   <view class="section__title">
+      <input placeholder="标题"  name="title" id="title"/>
+  </view>
+
+   <view class="section__title">
+      <input placeholder="姓名" name="realName" value="{{nickName}}"/>
+  </view>
+
+   <view class="section__title">
+      <input placeholder="手机号" name="phone" value="{{phone}}" />
+  </view>
+  <view class="section__title hide">
+      <input  name="videoId" value="{{videoId}}"/>
+  </view>
+
+     <view class="section__title hide">
+      <input  name="nickName" value="{{nickName}}"/>
+  </view>
+
+    <view class="section__title hide">
+      <input  name="openId" value="{{openId}}"/>
+  </view>
+   <view class="section__title hide">
+      <input  name="avatarUrl" value="{{avatarUrl}}"/>
+  </view>
+  
+   <view class="section__title">
+     <textarea class="textArea" placeholder="内容描述" auto-height="true" name="content"/>
+  </view>
+
+<view class="type">
+  <picker bindchange="bindPickerChange" style="width:750rpx" value="{{array[index]}}" range="{{array}}" name="type">
+    <view class="type1" style="width:750rpx">
+      事件类型：{{array[index]}}
+    </view>
+  </picker>
+</view>
+
+<view class="imgBox"><image src="../../image/camera.png" class="camera" bindtap="add"></image></view>
+<view class="parent">
+  <view class="child" wx:for="{{images}}" wx:for-item="mItem" >
+    <image  src="../../image/ic_del.png" mode="aspectFill"  class="del" bindtap="delImage" data-imgIndex="{{index}}"></image>
+    <image  src="{{mItem}}" mode="aspectFill" class="child2" ></image>
+  </view>
+</view>
+
+  <view class="relati">
+    <view  wx:for="{{videos}}" class="videoParent">
+       <video class="mov" src="{{item}}"   controls ></video>
+      </view>
+  </view>
+  <view class="btn-area" wx:if="{{videos.length>0}}">
+  <button class="bgr" bindtap="delVideo">删除视频</button>
+    </view>
+  <view class="btn-area">
+    <button class="bgc" formType="submit">提交</button>
+  </view>
+</form>
+</view>
+
+

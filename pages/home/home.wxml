@@ -1,0 +1,10 @@
+
+<view class="container">
+<view wx:for="{{menu}}" class="template-container">
+  <view id="mItem-wrap"  data-name="{{mItem.name}}">
+          <image  class="img1" src="{{item.img}}" mode="aspectFit" ></image>
+          <textview class="item-text" >{{item.text}}</textview>
+  </view>
+</view>
+   
+</view>

@@ -1,0 +1,6 @@
+<!--爆料的列表模板-->
+<template name="mListTem">
+    <view id="mItem-wrap" data-tipOff="{{mItem}}">
+        <image  src="{{mItem}}" mode="aspectFit" class="item-image"></image>
+    </view>
+</template>

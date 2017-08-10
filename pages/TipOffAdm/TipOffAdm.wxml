@@ -1,0 +1,25 @@
+<view class="container">
+
+<!--420+190=610 -->
+  <view class="container-item" wx:for="{{tipOffAdm}}">
+    <image  wx:if="{{item.imgList[0].length>0}}" class="image-item" src="{{item.imgList[0]}}" mode="aspectFill"></image>
+    <image   class="image-item" wx:else src="../../image/default.png" mode="aspectFill"></image>
+    <view style="width:420rpx;padding-left:5rpx;"  bindtap="jumpToDetail" data-tipOff="{{item}}">
+        <view style="height:50rpx;"><textview class="mtitle2" >{{item.title}}({{item.type}})</textview></view>
+        <view style="height:100rpx;"><textview class="mtitle3">{{item.content}}</textview></view>
+         
+         <view class="view4">
+         <textview class="mtitle4">{{item.realName}}</textview>
+         <textview class="mtitle4 tr">{{item.createDate}}</textview>
+         </view>
+           <view class="divLine"></view>
+    </view>
+    
+     <view class="vc">
+      <view class="btn1" bindtap="showActionSheet" wx:if="{{item.isAdopt==0}}" data-tipOff="{{item}}">采纳</view>
+       <image style="width:81rpx;height:81rpx" wx:if="{{item.isAdopt>0}}" src="../../image/adopt.png" ></image>
+     </view>
+  
+  </view>
+
+</view>

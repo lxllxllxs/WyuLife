@@ -1,0 +1,16 @@
+.box_100{
+    height: 100%
+}
+
+.box{
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+.boxBottom{
+    vertical-align:bottom;
+}
+
+.page-body-text-small {
+  font-size: 30rpx;
+  color: #888888;
+}

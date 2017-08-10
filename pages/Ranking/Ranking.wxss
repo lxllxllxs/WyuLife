@@ -1,0 +1,89 @@
+.rcontainer {
+  height: auto;
+  margin: 30rpx;
+  background-color: white;
+  border-radius:30rpx;
+  padding-bottom: 30rpx;
+}
+
+.textStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+page {  
+  background-color:#fbb842;  
+}  
+.img{
+  height: 100rpx;
+  width: 100rpx
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #FBF9FE;
+}
+/*模板内容*/
+#template-wrap{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:flex-start;
+}
+
+#title{
+    display: flex;
+    width: 95%;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+}
+
+#mItem-wrap{
+    width: 95%;
+    height: 100%;
+    padding-left: 10rpx;
+    padding-right: 10rpx; 
+    padding-top: 10rpx;
+    display: flex;
+    align-items: center;
+    /*background-color: greenyellow;*/
+    border-bottom: 1px solid #FBF9FE;
+
+}
+.template-container{
+    width: 100%;
+    height: 120rpx;
+}
+
+.mtitle{
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+     font-weight: bold;
+    color: #353535;
+}
+
+.listitem{
+    font-size: 15px;
+    text-align: center;
+    color: #565656;
+    flex-grow: 1;
+}
+
+.listitem2{
+    font-size: 15px;
+    color: #565656;
+    flex-grow: 1;
+}
+.img1{
+  width:90rpx; 
+  height:90rpx; 
+}
+.avart{
+  width:90rpx; 
+  height:90rpx; 
+  border-radius:50%; 
+}
