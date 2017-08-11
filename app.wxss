@@ -125,6 +125,10 @@ page {
 .red{
     color: #F76260;
 }
+.theme_red{
+    color: #E03131;
+}
+
 .blue{
     color: #10AEFF;
 }

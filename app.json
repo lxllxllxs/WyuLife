@@ -3,6 +3,7 @@
          "pages/home/home",
          "pages/shop/shop",
          "pages/my/my",
+         "pages/Send/Send",
         "pages/guangdian/index",
         "pages/guangdian/detail/detail",
         "pages/hudong/index",
