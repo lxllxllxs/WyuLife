@@ -29,18 +29,21 @@ Page({
    //从0开始
     var menu=event.currentTarget.dataset.menu
     console.log(menu)
+    var jumpToUrl;
+    //1取0寄
     switch (menu){
-      case 1:
+      case 0:
+      jumpToUrl='../SendAndTake/SendAndTake';
       break;
-       case 2:
+       case 1:    jumpToUrl='../SendAndTake/SendAndTake';
       break;
-       case 3:
+       case 2:    jumpToUrl='../SendAndTake/SendAndTake?type=0&';
       break;
-           case 4:
+      case 3:    jumpToUrl='../SendAndTake/SendAndTake?type=1&';
       break;
     }
     wx.navigateTo({
-    url: '../TipDetail/TipDetail?tipId='+tipOffId+'&title='+title
+    url:jumpToUrl
   })
   },
 

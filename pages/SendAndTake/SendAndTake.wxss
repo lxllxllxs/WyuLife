@@ -50,7 +50,7 @@ page {
 }
 .textArea{
     padding: 15px;
-    
+    font-size: 14px;
     background-color: white
 }
 
@@ -60,7 +60,7 @@ page {
 
 .bgc{
   color: white;
-  background-color: #fbb842;
+  background-color: #E03131;
 }
 .bgr{
   color: white;
