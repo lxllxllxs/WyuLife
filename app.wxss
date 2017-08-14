@@ -247,6 +247,11 @@ display: flex;
   justify-content: center;
 }
 
+.hc{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .tr{
     text-align: right;
 }

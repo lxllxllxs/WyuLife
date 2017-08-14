@@ -1,20 +1,65 @@
+var http = require("../../utils/http.js");
 Page({
   data:{
-    text:"Page shop"
+    categoryList:null,
+    productList:null,
+    selected:0,
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
+    this.getShopCategoryList();
   },
-  onReady:function(){
-    // 页面渲染完成
+    getProductList:function(cId){
+      var that=this;
+      var s=http.generateUrl('shop/getProductList');
+      wx.request({  
+      url:s,
+      data:{
+        pcId:cId
+      },  
+      method:"POST",
+      header: {  
+          'Content-Type': 'application/json' 
+      },  
+      success: function(res) {  
+         console.log(res.data)
+        that.setData({
+          productList:res.data.productList
+        })
+      }
+    })
   },
-  onShow:function(){
-    // 页面显示
+   getShopCategoryList:function(){
+      var that=this;
+      var s=http.generateUrl('shop/getShopCategoryList');
+      wx.request({  
+      url:s,
+      data:{
+      },  
+      method:"POST",
+      header: {  
+          'Content-Type': 'application/json' 
+      },  
+      success: function(res) {  
+         var temp=[];
+         console.log(res.data)
+        that.setData({
+          categoryList:res.data.categoryInfo
+        })
+      }
+    })
   },
-  onHide:function(){
-    // 页面隐藏
+  choseCategory: function(event) {
+    console.log(event)
+    var index=event.currentTarget.dataset.index
+    var cId=event.currentTarget.dataset.cag.categoryId
+    if(this.data.selected==index){
+      return;
+    }
+      this.setData({
+      selected:index
+    })
+    //调用
+    this.getProductList(cId)
   },
-  onUnload:function(){
-    // 页面关闭
-  }
 })

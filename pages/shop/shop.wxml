@@ -1,5 +1,15 @@
-<view class="container">
-  <view class="textContainer">
-    <text class="textStyle">{{text}}</text>
-  </view>
+<view class="hc">
+  <scroll-view scroll-y style="height: 100%;width:180rpx">
+  <block  wx:for="{{categoryList}}">
+    <view  bindtap="choseCategory" data-cag="{{item}}" data-index="{{index}}" class="scroll-view-item categoryView select" wx:if="{{index==selected}}" >{{item.categoryName}}</view>
+     <view bindtap="choseCategory" data-cag="{{item}}" data-index="{{index}}" class="scroll-view-item categoryView" wx:else >{{item.categoryName}}</view>
+  </block>
+  </scroll-view>
+  <view style="height: 100%;width:10rpx"/>
+  <scroll-view scroll-y style="height: 100%;width:560rpx" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="green" class="scroll-view-item bc_green">asd</view>
+    <view id="red"  class="scroll-view-item bc_red">asd</view>
+    <view id="yellow" class="scroll-view-item bc_yellow">asd</view>
+    <view id="blue" class="scroll-view-item bc_blue">qwe</view>
+  </scroll-view>
 </view>

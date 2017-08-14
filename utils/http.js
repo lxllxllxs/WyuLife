@@ -2,8 +2,8 @@
  * Created by RaPoSpectre on 4/20/16.
  */
 //根地址
-// var HOST_ROOT = "http://123.207.13.169:8080/cs/";
-var HOST_ROOT = "http://192.168.1.192:8080/";
+var HOST_ROOT = "http://123.207.13.169:8080/cs/";
+// var HOST_ROOT = "http://192.168.1.192:8080/";
 var hexcase = 0;
 /* hex output format. 0 - lowercase; 1 - uppercase        */
 var b64pad = "";
