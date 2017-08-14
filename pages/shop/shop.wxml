@@ -6,10 +6,12 @@
   </block>
   </scroll-view>
   <view style="height: 100%;width:10rpx"/>
-  <scroll-view scroll-y style="height: 100%;width:560rpx" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-    <view id="green" class="scroll-view-item bc_green">asd</view>
-    <view id="red"  class="scroll-view-item bc_red">asd</view>
-    <view id="yellow" class="scroll-view-item bc_yellow">asd</view>
-    <view id="blue" class="scroll-view-item bc_blue">qwe</view>
-  </scroll-view>
+
+  <view  style="height: 100%;width:560rpx" class="content-wrap">
+    <view  wx:for="{{productList}}" class="template-container">
+        <!--<image  src="{{item.pImage[0]}}" mode="aspectFill" class="child2" ></image>-->
+      <image  src="../../image/adopt.png" mode="aspectFill" class="child2" bindtap="jumpToDetail" data-pId="{{item.pId}}"></image>
+      <view class="item-text" >{{item.pTitle}}</view>
+    </view>
+  </view>
 </view>

@@ -22,3 +22,26 @@
 .textContainer {
   margin-top: 200px;
 }
+.template-container{
+    margin-top: 10rpx;
+    width: 180rpx;
+    height: 230rpx;
+}
+.content-wrap {
+  width: 750rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.child2 {
+  text-align: center;
+  height:180rpx;
+  width: 180rpx;
+}
+.item-text{
+  background-color: yellow;
+  width:180rpx;
+   font-size: 13px;
+    line-height:50rpx;
+   text-align: center;
+}

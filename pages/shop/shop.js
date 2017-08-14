@@ -9,6 +9,13 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     this.getShopCategoryList();
   },
+    jumpToDetail:function(pId){
+       var pId=event.currentTarget.dataset.pId
+      var jumpToUrl='../ProductDetail/ProductDetail?pId='+pId+"&";
+       wx.navigateTo({
+       url:jumpToUrl
+      })
+  },
     getProductList:function(cId){
       var that=this;
       var s=http.generateUrl('shop/getProductList');
@@ -24,7 +31,16 @@ Page({
       success: function(res) {  
          console.log(res.data)
         that.setData({
-          productList:res.data.productList
+          // productList:res.data.productList
+          productList:[
+            {"pId":115,"pcId":2,"pTitle":"测试1"},
+             {"pId":114,"pcId":2,"pTitle":"测试1"},
+            {"pId":15,"pcId":2,"pTitle":"测试1"},
+              {"pId":115,"pcId":2,"pTitle":"测试1"},
+             {"pId":114,"pcId":2,"pTitle":"测试1"},
+            {"pId":15,"pcId":2,"pTitle":"测试1"}
+            
+          ]
         })
       }
     })
@@ -46,6 +62,8 @@ Page({
         that.setData({
           categoryList:res.data.categoryInfo
         })
+        //第一次
+        that.getProductList(res.data.categoryInfo[0])
       }
     })
   },

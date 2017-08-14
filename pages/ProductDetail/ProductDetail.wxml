@@ -1,0 +1,5 @@
+<view class="container">
+<view >
+    <image  wx:for="{{tipOff.imgList}}" wx:for-item="mItem" src="{{mItem}}" mode="widthFix" class="img"></image>
+</view>
+</view>
