@@ -1,20 +1,29 @@
+var http = require("../../utils/http.js");
 Page({
   data:{
-    text:"Page ProductDetail"
+    productInfo:null
   },
   onLoad:function(options){
+      console.log(options)
     // 页面初始化 options为页面跳转所带来的参数
+    var pid=options.pId;
+    this.getProductInfo(pid);
   },
-  onReady:function(){
-    // 页面渲染完成
+  getProductInfo:function(pId){
+      var that=this;
+      var s=http.generateUrl('shop/getProductInfo');
+      wx.request({  
+      url:s,
+       method:"POST",
+      data:{
+        pId:pId
+      },  
+      success: function(res) {  
+         console.log(res.data)
+        that.setData({
+          productInfo:res.data.productInfo
+        })
+      }
+    })
   },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
-  }
 })

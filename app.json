@@ -4,11 +4,7 @@
          "pages/shop/shop",
          "pages/my/my",
          "pages/SendAndTake/SendAndTake",
-        "pages/ProductDetail/ProductDetail",
-        "pages/guangdian/detail/detail",
-        "pages/hudong/index",
-
-        "pages/TipOffAdm/TipOffAdm"
+        "pages/ProductDetail/ProductDetail"
   ],
   "window":{
     "backgroundTextStyle":"dark",

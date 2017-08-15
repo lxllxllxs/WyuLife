@@ -9,8 +9,9 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     this.getShopCategoryList();
   },
-    jumpToDetail:function(pId){
-       var pId=event.currentTarget.dataset.pId
+    jumpToDetail:function(event){
+      //这里是小写
+       var pId=event.currentTarget.dataset.pid
       var jumpToUrl='../ProductDetail/ProductDetail?pId='+pId+"&";
        wx.navigateTo({
        url:jumpToUrl
@@ -63,7 +64,7 @@ Page({
           categoryList:res.data.categoryInfo
         })
         //第一次
-        that.getProductList(res.data.categoryInfo[0])
+        that.getProductList(res.data.categoryInfo[0].categoryId)
       }
     })
   },
