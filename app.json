@@ -4,7 +4,8 @@
          "pages/shop/shop",
          "pages/my/my",
          "pages/SendAndTake/SendAndTake",
-        "pages/ProductDetail/ProductDetail"
+        "pages/ProductDetail/ProductDetail",
+         "pages/Login/Login"
   ],
   "window":{
     "backgroundTextStyle":"dark",

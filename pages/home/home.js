@@ -47,4 +47,9 @@ Page({
   })
   },
 
+  loginPage: function() {
+    wx.navigateTo({
+    url:'../Login/Login'
+  })
+  },
 })
