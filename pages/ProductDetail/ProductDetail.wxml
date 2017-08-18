@@ -1,5 +1,9 @@
 <view class="container">
-<view >
-    <image  wx:for="{{tipOff.imgList}}" wx:for-item="mItem" src="{{mItem}}" mode="widthFix" class="img"></image>
-</view>
+ <image  src="{{productInfo.pImage}}" style="width:750rpx;height:750rpx;background-color:#000" mode="aspectFill"></image>
+ <view class ="title">么么</view>
+<view class="desc">{{productInfo.pDescrition}}</view>  
+<image  wx:for="{{productInfo.pictureList}}" wx:for-item="mItem" src="{{mItem}}" mode="widthFix" class="img"></image>
+
+
+
 </view>
