@@ -2,8 +2,15 @@ var http = require("../../utils/http.js");
 var wyuApi = require("../../utils/WyuApi.js");
 Page({ 
  data: { 
+   loginFail:0
  }, 
  appLogin:function(e){
+      if(this.data.loginFail>=3){
+         wx.showToast({ 
+              title: '密码错误次数过多 请稍候再试',
+         })
+        return;
+      }
       var that=this;
       var json = e.detail.value;
       console.log(json)
@@ -22,14 +29,23 @@ Page({
          console.log(res.data)
          //需要登录学校子系统服务 将wyuApi转成js
          if(res.data.result==0){
-             wyuApi.getFirstCookie();
+            //  wyuApi.getFirstCookie();//没有https  不能自己实现登录
+            wx.showToast({ 
+              title: res.data.message, 
+              }) 
          }else{
+           that.data.loginFail=that.data.loginFail+1;
              wx.showToast({ 
               title: '登录成功', 
               icon: 'success', 
               duration: 2000 
               }) 
+             //记录 像
+             wx.setStorage({ key:"userInfo",data:res.data.userInfo}) 
           //准备跳转或关闭
+              wx.navigateBack({
+                delta: 1
+              })
          }
       }
       })

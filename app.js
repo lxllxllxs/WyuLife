@@ -7,6 +7,40 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     this.askLogin();*/
+    this.cs_login();
+
+  },
+   cs_login:function(){
+    var that = this;
+    var userInfo=wx.getStorageSync('userInfo');
+    var userNum=userInfo.userNum;
+    var password=userInfo.password;
+     console.log(userInfo)
+    if(userInfo.lenght>0){
+      console.log('准备静默登录')
+       wx.request({  
+      url:http.generateUrl('user/appLogin'),
+      data:{
+        userNum:userNum,
+        password:password
+      },
+      method:"POST",
+      header: {  
+          'Content-Type': 'application/json' 
+      },  
+      success: function(res) {  
+         console.log(res.data)
+         //需要登录学校子系统服务 将wyuApi转成js
+         if(res.data.result==0){
+            //  wyuApi.getFirstCookie();//没有https  不能自己实现登录
+              wx.setStorage({ key:"userInfo",data:null}) 
+                console.log('静默登录失败！')
+         }else{
+           console.log('静默登录成功！')
+         }
+      }
+      })
+    }
   },
    //为了获取openId,获取用户信息不需要openId
   askLogin:function(){

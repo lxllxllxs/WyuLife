@@ -5,7 +5,12 @@
          "pages/my/my",
          "pages/SendAndTake/SendAndTake",
         "pages/ProductDetail/ProductDetail",
-         "pages/Login/Login"
+         "pages/Login/Login",
+        "pages/Login/Login",
+        "pages/UserInfo/UserInfo",
+        "pages/PurchaseOrder/PurchaseOrder",
+         "pages/ExpressOrder/ExpressOrder",  
+          "pages/ShoppingCart/ShoppingCart" 
   ],
   "window":{
     "backgroundTextStyle":"dark",

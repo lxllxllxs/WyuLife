@@ -9,4 +9,6 @@
 </view>
 
   <view bindtap="loginPage" >登录界面</view>
+
+
   </view>

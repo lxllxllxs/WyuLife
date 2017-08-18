@@ -1,43 +1,27 @@
-<view class="page">
-<view>
-   <view class="bgimage">
-         <image class="avart" src="{{avart}}"></image>
-          <text class="nickName">{{userInfo.nickName}}</text>
-   </view>
+<view class="container">
+<view wx:if="{{isLogin}}">
+  <navigator url="../UserInfo/UserInfo"><image  class="img" src="../../image/adopt.png" ></image>个人信息</navigator>
+  <navigator url="../ShoppingCart/ShoppingCart"><image  class="img" src="../../image/adopt.png" ></image>购物车</navigator>
+  <navigator url="../PurchaseOrder/PurchaseOrder"><image  class="img" src="../../image/adopt.png" ></image>商品订单</navigator>
+  <navigator url="../ExpressOrder/ExpressOrder"><image  class="img" src="../../image/adopt.png" ></image>快递订单</navigator>
 
-   <view class="view_hori" >
-      <view class="lxl_text">总次数：<text class="theme_yellow">{{userInfo.tipCount}}次</text></view>
-       <view class="lxl_text">收益：<text class="theme_yellow">{{userInfo.reward}}元</text> </view>
-   </view>
-</view>
-
-<view id="body-wrap">
- <view id="title" wx:if="{{userInfo.isAdmin ==1}}">
-    <textview class="mtitle2" style="width:100%" bindtap="jumpToAdmList">查看爆料>>></textview>
-</view>
- <!-- <scroll-view scroll-x="true" class="content-items">
-    <view class="scroll-content">
-      <view class="drugitem" wx:for="{{tipOffsAdopt}}" wx:key="{{index}}" bindtap="jumpToDetail" data-tipOff="{{item}}">
-         <image wx:if="{{item.imgList[0].length>0}}" src="{{item.imgList[0]}}" mode="aspectFill"></image>
-        <image  wx:else src="../../image/default.png" mode="aspectFill"></image>
-        <text class="black">{{item.title}}</text>
-      </view>
-    </view>
-  </scroll-view>-->
-</view>
-<swiper duration="200" style="height:640rpx">
-  <block wx:for="{{tipOffs}}">
-    <swiper-item>
-    <view class="swiper-item box6" bindtap="jumpToDetail" data-tipOff="{{item}}">
-      <image class="slide-image" wx:if="{{item.imgList[0].length>0}}" src="{{item.imgList[0]}}" mode="aspectFill"></image>
-      <image class="slide-image"  wx:else src="../../image/default.png" mode="aspectFill"></image>
-      <image class="adopt" wx:if="{{item.isAdopt>0}}" src="../../image/adopt.png" mode="aspectFit"></image>
-      <text class="black">{{item.title}}({{item.type}})</text>
-      <text class="black">{{item.realName}}——{{item.createDate}}</text>
-    </view>
-
-    </swiper-item>
+  <block  wx:if="{{userInfo.is_supplier==1}}">
+      <navigator ><image  class="img" src="../../image/adopt.png" ></image>发布产品</navigator>
+      <navigator><image  class="img" src="../../image/adopt.png" ></image>我的商品</navigator>
+      <navigator><image  class="img" src="../../image/adopt.png" ></image>已卖商品</navigator>
+      <navigator ><image  class="img" src="../../image/adopt.png" ></image>退货订单</navigator>
+      <navigator ><image  class="img" src="../../image/adopt.png" ></image>其他订单</navigator>
   </block>
-</swiper>
+
+  <navigator ><image  class="img" src="../../image/adopt.png" ></image>设置</navigator>
+  
+  
+
+</view>
+
+
+
+<button class="loginBtn" bindtap="loginPage" type="primary"   wx:if="{{isLogin==false}}">{{userInfo}} {{isLogin}}登录</button> 
+
 
 </view>
