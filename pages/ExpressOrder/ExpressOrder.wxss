@@ -1,19 +1,35 @@
+.content-items {
+  width: 750rpx;
+}
 .container {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
+  min-height: 100%;
+  justify-content: flex-start;
 }
-
-.textStyle {
+.loginBtn{
+  margin: auto;  
+  position: absolute;  
+  height: 100rpx;
+  width: 710rpx;
+  top: 0; left: 0; bottom: 0; right: 0;  
+}
+navigator{
+  background-color: yellowgreen;
+  width: 750rpx;
+  height: 90rpx;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  font-size: 14px;
+  color: #353535;
+  border-bottom: 1px solid #eee
+}
+.img{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  height: 60rpx;
+  width: 60rpx;
 }
 
-.textContainer {
-  margin-top: 200px;
-}
+

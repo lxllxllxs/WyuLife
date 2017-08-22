@@ -119,7 +119,7 @@ Page({
     }
     //添加时间和商家学号 用户id
     json.timeType=this.data.timeType;
-    json.userNum='3112022655';
+    json.userNum=wx.getStorageSync('userInfo').userNum;
      if (json.remark==""){
          this.setData({
              isShow:true,

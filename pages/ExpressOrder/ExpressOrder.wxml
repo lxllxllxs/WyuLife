@@ -1,5 +1,6 @@
 <view class="container">
-  <view class="textContainer">
-    <text class="textStyle">{{text}}</text>
-  </view>
+
+  <block  wx:for="{{otherOrderList}}">
+      <navigator >{{item.orderTime+item.remark+item.TIME_TYPE+item.contactAddr+item.state}}</navigator>
+  </block>
 </view>
