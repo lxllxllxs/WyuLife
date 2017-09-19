@@ -1,9 +1,17 @@
 <view class="container">
- <image  src="{{productInfo.pImage}}" style="width:750rpx;height:750rpx;background-color:#000" mode="aspectFill"></image>
- <view class ="title">么么</view>
+ <image  src="{{productInfo.pImage}}" style="width:750rpx;height:450rpx;background-color:#000" mode="aspectFill"></image>
+ <view class ="title">{{productInfo.pTitle}}</view>
 <view class="desc">{{productInfo.pDescrition}}</view>  
 <image  wx:for="{{productInfo.pictureList}}" wx:for-item="mItem" src="{{mItem}}" mode="widthFix" class="img"></image>
 
+<view class="boxgroup">
+    <view wx:for="{{productInfo.modelList}}" wx:for-item="mItem">
+        <view class="box" bindtap="modelChange" data-index="{{index}}">{{mItem.pmTitle}}</view>
+    </view>
+</view>
 
-
+<text></text>
+ <view class="btn-area">
+    <button class="bgc" >下单</button>
+  </view>
 </view>

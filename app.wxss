@@ -55,6 +55,13 @@ page {
   margin-bottom: 100rpx;
   font-size: 32rpx;
 }
+.bgc{
+  color: white;
+  background-color: #E03131;
+}
+button{
+    background-color: #E03131;
+}
 .page-body-text {
   font-size: 30rpx;
   line-height: 26px;

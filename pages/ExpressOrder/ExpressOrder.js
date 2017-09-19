@@ -7,12 +7,13 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     var userInfo=wx.getStorageSync('userInfo')
     var userNum=userInfo.userNum;
+    console.log(userInfo)
     this.getUserOtherOrderList(userNum);
   },
     getUserOtherOrderList:function(userNum){
       var that=this;
       wx.request({  
-      url:http.generateUrl('express/getUserOtherOrderList'),
+      url:http.generateUrl('express/getUserOtherOrderList2'),
        method:"POST",
       data:{
         userNo:userNum

@@ -7,7 +7,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     this.askLogin();*/
-    // this.cs_login();
+    this.cs_login();
 
   },
    cs_login:function(){

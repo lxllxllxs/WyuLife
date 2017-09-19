@@ -34,12 +34,12 @@ Page({
         that.setData({
           // productList:res.data.productList
           productList:[
-            {"pId":117,"pcId":2,"pTitle":"测试1"},
-             {"pId":117,"pcId":2,"pTitle":"测试1"},
-            {"pId":117,"pcId":2,"pTitle":"测试1"},
-              {"pId":117,"pcId":2,"pTitle":"测试1"},
-             {"pId":117,"pcId":2,"pTitle":"测试1"},
-            {"pId":117,"pcId":2,"pTitle":"测试1"}
+            {"pId":124,"pcId":2,"pTitle":"测试1"},
+             {"pId":124,"pcId":2,"pTitle":"测试1"},
+            {"pId":124,"pcId":2,"pTitle":"测试1"},
+              {"pId":124,"pcId":2,"pTitle":"测试1"},
+             {"pId":124,"pcId":2,"pTitle":"测试1"},
+            {"pId":124,"pcId":2,"pTitle":"测试1"}
             
           ]
         })

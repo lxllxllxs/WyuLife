@@ -7,6 +7,15 @@
   min-height: 100%;
   justify-content: flex-start;
 }
+.item{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  background-color: yellowgreen;
+}
 .loginBtn{
   margin: auto;  
   position: absolute;  
@@ -31,5 +40,11 @@ navigator{
   height: 60rpx;
   width: 60rpx;
 }
-
-
+.mtitle{
+  overflow:scroll;
+/*  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  -webkit-text-overflow:ellipsis;
+  -moz-text-overflow:ellipsis;*/
+  white-space:nowrap;
+}

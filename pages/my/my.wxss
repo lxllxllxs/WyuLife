@@ -8,6 +8,7 @@
   justify-content: flex-start;
 }
 .loginBtn{
+  background-color: E03131;
   margin: auto;  
   position: absolute;  
   height: 100rpx;

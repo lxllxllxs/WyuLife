@@ -1,6 +1,11 @@
 <view class="container">
 
   <block  wx:for="{{otherOrderList}}">
-      <navigator >{{item.orderTime+item.remark+item.TIME_TYPE+item.contactAddr+item.state}}</navigator>
+      <view class="item">
+        <text class="tc" style="width:15%">{{item.state}}</text>
+        <text class="tc" style="width:20%">{{item.orderTime}}</text>
+        <text class="tc" style="width:25%">{{item.TIME_TYPE}}</text>
+        <text class="tc mtitle" style="width:40%">{{item.remark}}</text>
+      </view>
   </block>
 </view>

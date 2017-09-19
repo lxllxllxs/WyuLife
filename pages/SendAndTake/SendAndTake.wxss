@@ -58,10 +58,6 @@ page {
     display:none
 }
 
-.bgc{
-  color: white;
-  background-color: #E03131;
-}
 .bgr{
   color: white;
   background-color: #d81e06;
