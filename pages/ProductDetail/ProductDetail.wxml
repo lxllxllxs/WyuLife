@@ -2,16 +2,30 @@
  <image  src="{{productInfo.pImage}}" style="width:750rpx;height:450rpx;background-color:#000" mode="aspectFill"></image>
  <view class ="title">{{productInfo.pTitle}}</view>
 <view class="desc">{{productInfo.pDescrition}}</view>  
-<image  wx:for="{{productInfo.pictureList}}" wx:for-item="mItem" src="{{mItem}}" mode="widthFix" class="img"></image>
 
-<view class="boxgroup">
-    <view wx:for="{{productInfo.modelList}}" wx:for-item="mItem">
-        <view class="box" bindtap="modelChange" data-index="{{index}}">{{mItem.pmTitle}}</view>
+
+<view class="padding">
+    <view class="price">￥{{price}}</view>
+    <view class="boxgroup">
+        <view wx:for="{{productInfo.modelList}}" wx:for-item="mItem">
+            <view class="box" bindtap="modelChange" data-model="{{mItem}}">{{mItem.pmTitle}}</view>
+        </view>
     </view>
-</view>
+    <view class="stepper">  
+        <!-- 减号 -->  
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>  
+        <!-- 数值 -->  
+        <input type="number" bindchange="bindManual" value="{{count}}" />  
+        <!-- 加号 -->  
+        <text class="normal" bindtap="bindPlus">+</text>  
+    </view>  
+</view>  
 
-<text></text>
  <view class="btn-area">
     <button class="bgc" >下单</button>
   </view>
 </view>
+
+
+<image  wx:for="{{productInfo.pictureList}}" wx:for-item="mItem" src="{{mItem}}" mode="widthFix" class="img"></image>
+

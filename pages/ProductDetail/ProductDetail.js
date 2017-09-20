@@ -2,7 +2,11 @@ var http = require("../../utils/http.js");
 Page({
   data:{
     productInfo:null,
-    index:0;
+    index:0,
+    amount:0,
+    price:0,
+    count:1,
+    minusStatus:'disabled'
   },
   onLoad:function(options){
       console.log(options)
@@ -11,6 +15,7 @@ Page({
     this.getProductInfo(pid);
   },
   getProductInfo:function(pId){
+    
       var that=this;
       var s=http.generateUrl('shop/getProductInfo');
       wx.request({  
@@ -31,6 +36,48 @@ Page({
     })
   },
   modelChange: function(e) {
-    console.log('radio发生change事件，携带value值为：',e.currentTarget.dataset.index);
-  }
+    var model=e.currentTarget.dataset.model;
+    console.log('radio发生change事件，携带value值为：',model);
+    this.setData({
+      price:model.pmPrice
+    })
+  },
+  /******加减数量控件****** */
+   /* 点击减号 */  
+    bindMinus: function() {  
+        var count = this.data.count;  
+        // 如果大于1时，才可以减  
+        if (count > 1) {  
+            count --;  
+        }  
+        // 只有大于一件的时候，才能normal状态，否则disable状态  
+        var minusStatus = count <= 1 ? 'disabled' : 'normal';  
+        // 将数值与状态写回  
+        this.setData({  
+            count: count,  
+            minusStatus: minusStatus  
+        });  
+    },  
+    /* 点击加号 */  
+    bindPlus: function() {  
+        var count = this.data.count;  
+        // 不作过多考虑自增1  
+        count ++;  
+        // 只有大于一件的时候，才能normal状态，否则disable状态  
+        var minusStatus = count < 1 ? 'disabled' : 'normal';  
+        // 将数值与状态写回  
+        this.setData({  
+            count: count,  
+            minusStatus: minusStatus  
+        });  
+    },  
+    /* 输入框事件 */  
+    bindManual: function(e) {  
+        var count = e.detail.value;  
+        // 将数值与状态写回  
+        this.setData({  
+            count: count  
+        });  
+    }  
+
 })
