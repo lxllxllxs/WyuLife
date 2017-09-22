@@ -8,7 +8,8 @@
     <view class="price">￥{{price}}</view>
     <view class="boxgroup">
         <view wx:for="{{productInfo.modelList}}" wx:for-item="mItem">
-            <view class="box" bindtap="modelChange" data-model="{{mItem}}">{{mItem.pmTitle}}</view>
+            <view class="box2" wx:if="{{index==pindex}}" bindtap="modelChange" data-model="{{mItem}}"  data-pindex="{{index}}">{{mItem.pmTitle}}</view>
+            <view class="box" wx:if="{{index!=pindex}}" bindtap="modelChange" data-model="{{mItem}}"  data-pindex="{{index}}">{{mItem.pmTitle}}</view>
         </view>
     </view>
     <view class="stepper">  
@@ -22,7 +23,7 @@
 </view>  
 
  <view class="btn-area">
-    <button class="bgc" >下单</button>
+    <button class="bgc" bindtap="next">下单</button>
   </view>
 </view>
 

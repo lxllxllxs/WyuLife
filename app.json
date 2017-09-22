@@ -9,7 +9,8 @@
         "pages/UserInfo/UserInfo",
         "pages/PurchaseOrder/PurchaseOrder",
          "pages/ExpressOrder/ExpressOrder",  
-          "pages/ShoppingCart/ShoppingCart" 
+          "pages/ShoppingCart/ShoppingCart",
+          "pages/CreateOrder/CreateOrder"
   ],
   "window":{
     "backgroundTextStyle":"dark",

@@ -2,17 +2,24 @@ var http = require("../../utils/http.js");
 Page({
   data:{
     productInfo:null,
-    index:0,
+    pindex:0,
     amount:0,
     price:0,
     count:1,
-    minusStatus:'disabled'
+    minusStatus:'disabled',
   },
   onLoad:function(options){
       console.log(options)
     // 页面初始化 options为页面跳转所带来的参数
     var pid=options.pId;
     this.getProductInfo(pid);
+  },
+  //需要传递的参数：产品名，产品id,类型名，类型id,件数，单价,图片链接
+  next:function(e){
+    var jumpToUrl='../CreateOrder/CreateOrder?index='+this.data.pindex+"&count="+this.data.count;
+   wx.navigateTo({
+      url:jumpToUrl
+      })
   },
   getProductInfo:function(pId){
     
@@ -32,14 +39,20 @@ Page({
         that.setData({
           productInfo:res.data.productInfo
         })
+        wx.setStorage({
+            key:"productInfo",
+            data:res.data.productInfo
+            })
       }
     })
   },
   modelChange: function(e) {
     var model=e.currentTarget.dataset.model;
-    console.log('radio发生change事件，携带value值为：',model);
+    var pindex=e.currentTarget.dataset.pindex;
+    console.log(pindex);
     this.setData({
-      price:model.pmPrice
+      price:model.pmPrice,
+      pindex:pindex
     })
   },
   /******加减数量控件****** */

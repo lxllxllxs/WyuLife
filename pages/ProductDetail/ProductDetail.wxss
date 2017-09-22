@@ -46,20 +46,31 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-content:flex-start;
-  background-color: yellow;
 }
 .box{
-  padding-top: 15rpx;
-  padding-bottom: 15rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
   padding-left: 20rpx;
   padding-right: 20rpx;
-  margin-top: 20rpx;
-  margin-right: 20rpx;
+  margin-top: 10rpx;
+  margin-right: 10rpx;
   font-size: 13px;
-   color: #353535;
-  border: solid,1px,09BB07;
-  background-color: red;
+  color: #353535;
+   border: 2px solid #eee;
 }
+
+.box2{
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-top: 10rpx;
+  margin-right: 10rpx;
+  font-size: 13px;
+  color: #E03131;
+  border: 2px solid #E03131;
+}
+
 /****加减控件***/
 /*主容器*/  
 .stepper {  
@@ -68,7 +79,8 @@
     /*给主容器设一个边框*/  
     border: 1px solid #ccc;  
     border-radius: 3px;  
-    margin-left: 20rpx;
+    margin-left: 15rpx;
+    margin-top: 15rpx;
 }  
   
 /*加号和减号*/  
