@@ -156,9 +156,12 @@ Page({
           return
         }
          wx.showToast({
-          title:'提交成功！'
+          title:'下单成功！'
          });
-        console.log(res.data)
+    
+         wx.navigateBack({
+         delta: 1
+        })
       },
       fail:function(res){
         this.setData({
